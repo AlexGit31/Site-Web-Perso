@@ -175,36 +175,80 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Pour la gestion de la barre de navigation*/
-/* Par défaut, l'icône hamburger est masquée */
+/* Gestion de bare de navigation*/
+header {
+  /* Permet de répartir les éléments sur une ligne */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* On masque l'icône hamburger sur écran large (elle servira en mobile) */
 .hamburger {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
 }
+
+nav ul {
+  /* En grand écran, le menu horizontal reste affiché */
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Liens nav */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #0f0;
+}
+
 @media (max-width: 768px) {
-  /* On masque l'icône hamburger en grand écran, mais en petit écran on l'affiche */
+  /* On affiche l’icône hamburger en mobile */
   .hamburger {
     display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
+    order: 2; /* Pour être sûr qu’elle soit à droite si besoin */
   }
 
-  /* Le menu est masqué par défaut */
+  /* Le ul est masqué par défaut ou via max-height pour l’animation */
   nav ul {
-    /* Avant : display: none; 
-       On passe plutôt par max-height = 0 + overflow hidden */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    /* Option A : disparaît complètement */
+    display: none;
 
+    /* Option B si on utilise une animation de déroulement 
+       => max-height = 0; overflow: hidden; transition: max-height .4s; */
+  }
+
+  /* Quand .menu-open est actif, on l’affiche */
+  nav ul.menu-open {
+    display: flex;
     flex-direction: column; /* Empilement vertical */
     gap: 10px;
-    margin-top: 10px;
+
+    /* Option B: max-height: 200px; (ou +) */
   }
 
-  /* Quand la classe 'menu-open' est présente, on déplie */
-  nav ul.menu-open {
-    max-height: 200px; /* Adapte cette valeur à la hauteur requise */
+  /* On peut aussi ajuster l’ordre si on veut absolument 
+     le site-title en 1er, la nav en 2ème, etc. */
+  .site-title {
+    order: 1;
+  }
+  nav {
+    order: 2;
+    display: flex;
+    align-items: center;
   }
 }
