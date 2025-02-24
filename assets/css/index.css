@@ -174,3 +174,37 @@ footer {
 footer p {
   font-size: 0.9rem;
 }
+
+/* Pour la gestion de la barre de navigation*/
+/* Par défaut, l'icône hamburger est masquée */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  /* On masque l'icône hamburger en grand écran, mais en petit écran on l'affiche */
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* Le menu est masqué par défaut */
+  nav ul {
+    /* Avant : display: none; 
+       On passe plutôt par max-height = 0 + overflow hidden */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+
+    flex-direction: column; /* Empilement vertical */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Quand la classe 'menu-open' est présente, on déplie */
+  nav ul.menu-open {
+    max-height: 200px; /* Adapte cette valeur à la hauteur requise */
+  }
+}

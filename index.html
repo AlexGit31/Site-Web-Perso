@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Web de Alexis</title>
+    <title>Site Web d'Alexis</title>
     <!-- Optionnel : Import d'une police depuis Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,12 +19,15 @@
 
     <!-- En-tête + nav -->
     <header>
-      <div class="site-title">Site Web de Alexis</div>
+      <div class="site-title">Site Web d'Alexis</div>
       <nav>
+        <!-- Icône hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul>
           <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#loisirs">Loisirs</a></li>
+          <li><a href="#projets">Projets</a></li>
           <li><a href="#biblio">Bibliographie</a></li>
         </ul>
       </nav>
@@ -44,6 +47,16 @@
          et on le stocke dans data-text, 
          pour l'afficher lettre par lettre en JS -->
       <section class="content-section">
+        <div
+          class="block"
+          id="infos-simple"
+          data-text="À propos de moi
+
+Actuellement étudiant en Data et Computer Engineering à Polytech Lille.
+Je suis passioné de Mathématiques et d'Informatique, notament de Théorie des
+Probabilité et en Deep-Learning."
+        ></div>
+
         <div
           class="block"
           id="contact"
@@ -75,5 +88,4 @@ Consultez mon parcours professionnel et mes compétences pour en savoir plus sur
     </footer>
     <script src="./assets/js/index.js"></script>
   </body>
-  <
 </html>

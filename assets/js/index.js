@@ -116,3 +116,9 @@ blocks.forEach((block) => {
     }
   });
 });
+
+// Pour la gestion du menu en fonction de la taille de l'écran
+function toggleMenu() {
+  const navUl = document.querySelector("header nav ul");
+  navUl.classList.toggle("menu-open");
+}
