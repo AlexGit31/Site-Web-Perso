@@ -120,5 +120,7 @@ blocks.forEach((block) => {
 // Pour la gestion du menu en fonction de la taille de l'écran
 function toggleMenu() {
   const navUl = document.querySelector("header nav ul");
+  const burger = document.querySelector(".hamburger");
   navUl.classList.toggle("menu-open");
+  burger.classList.toggle("open");
 }

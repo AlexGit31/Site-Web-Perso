@@ -252,3 +252,65 @@ nav ul li a:hover {
     align-items: center;
   }
 }
+
+/* Animation nav bar*/
+@media (max-width: 768px) {
+  nav ul {
+    /* On masque le menu par défaut en petit écran */
+    max-height: 0; /* Réduit la hauteur à 0 */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    transition: max-height 0.4s ease; /* Durée + type de transition */
+
+    /* Layout vertical */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul.menu-open {
+    max-height: 300px; /* On déploie jusqu'à 300px */
+  }
+}
+
+/* Animation logo hamburger*/
+
+.hamburger {
+  width: 30px;
+  height: 24px; /* 3 barres de 6px d'espacement, par exemple */
+  position: relative;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
+}
+
+/* Placer les 3 barres à différentes hauteurs */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+/* Quand on ajoute la classe .open sur le hamburger, 
+   on transforme les barres pour faire un X */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0; /* La barre du milieu disparaît */
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
