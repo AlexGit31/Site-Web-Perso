@@ -1,0 +1,17 @@
+.email-contact {
+  line-height: 2.2;
+}
+
+.email-contact a {
+  background-color: rgba(0, 255, 0, 0.2); /* Fond léger vert */
+  color: #0f0; /* Texte vert pour l'harmonie avec votre thème */
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.email-contact a:hover {
+  background-color: rgba(0, 255, 0, 0.4); /* Accentuation au survol */
+}
