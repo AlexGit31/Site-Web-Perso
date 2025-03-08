@@ -21,6 +21,7 @@
 .gallery-container img:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  filter: blur(5px);
 }
 
 /* Lightbox */
@@ -49,4 +50,31 @@
   max-width: 90%;
   max-height: 90%;
   border-radius: 5px;
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.photo-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Empêche le texte de bloquer le hover */
+}
+
+.photo-container:hover .photo-details {
+  opacity: 1;
 }
