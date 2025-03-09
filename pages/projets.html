@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Web d'Alexis: Contact</title>
+    <!-- Optionnel : Import d'une police depuis Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../assets/css/projets.css" />
+  </head>
+  <body>
+    <!-- Canvas pour l'animation de fond -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- En-tête + nav -->
+    <header>
+      <div
+        class="site-title"
+        onclick="window.location.href='./../index.html';"
+        style="cursor: pointer"
+      >
+        Site Web d'Alexis
+      </div>
+      <nav>
+        <!-- Icône hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./loisirs.html">Loisirs</a></li>
+          <li><a href="./projets.html">Projets</a></li>
+          <li><a href="./bibliographie.html">Bibliographie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section de présentation / "Hero" -->
+      <section class="hero">
+        <h1>Mes Projets</h1>
+        <p>
+          Je fais ici la liste de mes projets !<br />
+          J'y liste des projets d'école ainsi que mes projets personnels.
+        </p>
+      </section>
+
+      <!-- Blocs principaux 
+         On supprime le contenu "direct" (h2/p) 
+         et on le stocke dans data-text, 
+         pour l'afficher lettre par lettre en JS -->
+      <section class="content-section">
+        <div class="block-container">
+          <div class="block" id="projet1">
+            <img
+              src="./../assets/illustration-projet/IA-echecs.png"
+              alt="ia-echecs"
+            />
+            <hr align="CENTER" width="100%" />
+            <h1>IA pour jouer aux échecs</h1>
+            <p>Intelligence artificielle capable de jouer aux échecs.</p>
+
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>Arbre de recherhce</li>
+            </ul>
+          </div>
+          <div class="block" id="projet2">
+            <img
+              src="./../assets/illustration-projet/projet-musique.png"
+              alt="projet-musique"
+            />
+            <h1>téléchargeur de Musique</h1>
+            <p>Petit logiciel permettant de télécharger de la musique.</p>
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>yt_dlp</li>
+            </ul>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block" id="projet3">
+            <img
+              src="./../assets/illustration-projet/projet-dashbord.png"
+              alt="projet-dashbord"
+            />
+            <h1>Dashbord Html</h1>
+
+            <p>
+              Dashbord reprenant les données salariales de l'INSEE qui met en
+              relief les pisparitées de salaire en France, notamment entre les
+              deux genres.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>Arbre de recherhce</li>
+            </ul>
+          </div>
+          <div class="block" id="projet4">
+            <img
+              src="./../assets/illustration-projet/BD-projet.png"
+              alt="projet-BDD"
+            />
+            <h1>Site Web pour organiser un Séminaire</h1>
+            <p>
+              Site web permettant de gérer une une journée conférence. Code en
+              html, css et php pour intéragir avec une base de données gérée
+              avec Postgres.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>Arbre de recherhce</li>
+            </ul>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block" id="projet5">
+            <img
+              src="./../assets/illustration-projet/projet-neovim.png"
+              alt="projet-neovim"
+            />
+            <h1>Configuration Neovim</h1>
+            <p>
+              Configuration personnelle de Neovim qui est maintenant mon outil à
+              tout faire : édition de code/ de texte, prises de notes, gestion
+              de bases de données ect. Au total plus de 40 plugins et 399
+              keymaps pour améliorer mon workflow. (la plus part du code est en
+              lua).
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>Arbre de recherhce</li>
+            </ul>
+          </div>
+          <div class="block" id="projet6">
+            <img
+              src="./../assets/illustration-projet/py-env2.png"
+              alt="projet-python-evn"
+            />
+            <h1>GUI Environnement Virtuel Python</h1>
+            <p>
+              Ceci est un petit outil personnel me permettant d'avoir un
+              interface interactif pour selectionner facilement un environnement
+              virtuel python. Je l'ai développé pour dépondre à mes besoins
+              personnels.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Algorithme Alpha-Beta</li>
+              <li>Arbre de recherhce</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Alexis - Tous droits réservés</p>
+    </footer>
+    <script src="./../assets/js/projets.js"></script>
+    <script>
+      const helpButton = document.querySelector(".help-button");
+      const infoBox = document.getElementById("infoBox");
+
+      function toggleInfoBox() {
+        infoBox.classList.toggle("active");
+      }
+
+      helpButton.addEventListener("click", toggleInfoBox);
+    </script>
+  </body>
+</html>
