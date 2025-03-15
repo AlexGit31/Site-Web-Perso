@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./../assets/css/main.css" />
-    <link rel="stylesheet" href="./../assets/css/contact.css" />
+    <link rel="stylesheet" href="./../assets/css/bibliographie.css" />
     <script
       type="text/javascript"
       src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
@@ -55,39 +55,60 @@
     <main>
       <!-- Section de présentation / "Hero" -->
       <section class="hero">
-        <h1>Ma Bibliographie</h1>
+        <h1>Bibliographie</h1>
         <p>
-          Je répertorie ici un certain nombre d'ouvrages que j'ai lus et que je recommande aux curieux ou à
-          ceux voulant développer de nouvelles connaissances.
+          Cette page répertorie l'ensemble de mes livres de
+          <a
+            href="#section1"
+            style="
+              background-color: lightgreen;
+              color: black;
+              padding: 2px 5px;
+              text-decoration: none;
+              border-radius: 4px;
+            "
+            >Mathématiques</a
+          >et
+          <a
+            href="#section2"
+            style="
+              background-color: lightgreen;
+              color: black;
+              padding: 2px 5px;
+              text-decoration: none;
+              border-radius: 4px;
+            "
+          >
+            Informatiques</a
+          >, avec une sélection soigneuse pour chaque domaine.
         </p>
       </section>
-
-      <!-- Blocs principaux 
-         On supprime le contenu "direct" (h2/p) 
-         et on le stocke dans data-text, 
-         pour l'afficher lettre par lettre en JS -->
       <section class="content-section">
-        <div class="block" id="contact-perso">
-          <h1>Mathématiques</h1>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+        <div class="block" id="section1">
+          <div class="profile-wrapper">
+            <h1>Mes livres de maths</h1>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Rechercher un livre..."
+            />
+            <ul id="bookList">
+              <!-- Les livres seront ajoutés ici dynamiquement -->
+            </ul>
+          </div>
         </div>
-        <div class="block" id="contact-ecole">
-          <h1>Informatique</h1>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+        <div class="block" id="section2">
+          <div class="profile-wrapper">
+            <h1>Mes livres d'Informatique</h1>
+            <input
+              type="text"
+              id="searchInput2"
+              placeholder="Rechercher un livre..."
+            />
+            <ul id="bookList2">
+              <!-- Les livres seront ajoutés ici dynamiquement -->
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -96,5 +117,7 @@
       <p>&copy; 2025 Alexis - Tous droits réservés</p>
     </footer>
     <script src="./../assets/js/index.js"></script>
+    <script src="./../assets/js/bibliographie.js"></script>
+    <script src="./../assets/js/bibliographie2.js"></script>
   </body>
 </html>
